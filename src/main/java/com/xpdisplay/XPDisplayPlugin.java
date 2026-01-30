@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 @PluginDescriptor(
 	name = "XP Display",
 	description = "Changes your total level info on your skill page into total XP instead",
-	tags = {"total", "level"}
+	tags = {"total", "skill", "level"}
 )
 public class XPDisplayPlugin extends Plugin
 {
@@ -47,7 +47,7 @@ public class XPDisplayPlugin extends Plugin
 	@Subscribe
 	public void onScriptCallbackEvent(ScriptCallbackEvent e)
 	{
-		final Object[] objectStack = client.getObjectStack();;
+		final Object[] objectStack = client.getObjectStack();
 		final int objectStackSize = client.getObjectStackSize();
 
 		if (e.getEventName().equalsIgnoreCase(("skillTabTotalLevel"))) {
